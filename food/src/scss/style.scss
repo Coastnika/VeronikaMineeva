@@ -1,0 +1,443 @@
+
+@font-face{
+    font-family: Neutraface-Bold;
+    font-weight: bold;
+    font-style: normal;
+    src:url(../../src/fonts/Neutraface-2-Disp-Greek-Bold.otf);
+}
+@font-face{
+    font-family: Neutraface-Tl1;
+    font-weight: bold;
+    font-style: normal;
+    src:url(../../src/fonts/Neutraface-2-Disp-Greek-Titl.otf);
+}
+@font-face{
+    font-family: Neutraface-inline;
+    font-weight: bold;
+    font-style: normal;
+    src:url(../../src/fonts/Neutraface2Display-Inline.otf);
+}
+
+// === variable ===
+$font-Neutraface-Bold: Neutraface-Bold;
+$font-Neutraface-Tl1: Neutraface-Tl1;
+
+$color-secondary: #d91f1f;
+
+$transition: all .3s ease;
+
+// === mixins ===
+@mixin center {
+    max-width: 144rem;
+    margin: auto;
+}
+
+@mixin pseudo{
+    content: '';
+    position: absolute;
+}
+
+@mixin cover($url){
+    background-image: $url;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+@mixin color-secondary{
+    background-color: $color-secondary;
+    opacity: .5;
+}
+
+@import "../scss/blocks/content.scss";
+
+// === common ===
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-size: 10px;
+    background-image: url('../../src/img/body-background.jpg');
+    background-repeat: repeat;
+
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.logo{
+    font-family: $font-Neutraface-Tl1;
+    font-size: 3.5em;
+    position: relative;
+    padding-left: 1em;
+    width: 11.5rem;
+    &::before, &::after{
+        @include pseudo;
+        width: 2.8rem;
+        height: .5rem;
+        @include color-secondary;
+        bottom: 1.2rem;
+    }
+    &::before{
+        left: -.6rem;
+    }
+    &::after{
+        right: -3.3rem;
+    }
+}
+.link{
+    font-family: $font-Neutraface-Bold;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color:#000;
+    transition: $transition;
+    &:hover{
+        color: $color-secondary;
+        opacity: .5;
+    }
+}
+
+// === header ===
+.header{
+    @include cover(url("../../src/img/header-background.jpg"));
+    position: relative;
+    &__container{
+        @include center();
+        height: 100vh;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    &__logo{
+        font-family: $font-Neutraface-Tl1;
+        font-size: 3.5em;
+        position: relative;
+        padding-left: 1em;
+        &::before, &::after{
+            @include pseudo;
+            width: 2.8rem;
+            height: .5rem;
+            @include color-secondary;
+            bottom: 1.2rem;
+        }
+        &::before{
+            left: -.6rem;
+        }
+        &::after{
+            right: -3.3rem;
+        }
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 7.5rem;
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            width: 70rem;
+        }
+    }
+    &__menu{
+        cursor: pointer;
+        position: fixed;
+        right: 2em;
+        top: 2em;
+        z-index: 10;
+        &-hamburger{
+            width: 5rem;
+            height: .3rem;
+            background-color:#000;
+            position: relative;
+            transition: $transition;
+            margin: 1em 0;
+        }
+    }
+
+    &__main{
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content{
+        max-width: 50rem;
+        &-image{
+            width: 90%;
+        }
+    }
+    &__swipe{
+        position: absolute;
+        left: 50%;
+        top:95%;
+        width: 6.4rem;
+        height: 3.5rem;
+        margin-left: -3.2rem;
+        margin-top: -1.7rem;
+        cursor: pointer;
+        &-arrow{
+            width: 100%;
+        }
+    }
+}
+@media (max-width:768px){
+    .header{
+        &__nav-list{
+            display: none;
+        }
+    }
+}
+@media (min-width:541px){
+    .header{
+        &__menu{
+            display: none;
+        }
+    }
+}
+
+// === menu-hidden ===
+.menu-hidden{
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    z-index: 10;
+    &__nav-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10em;
+        background-color: rgba(255, 255, 255, .9);
+        background-image: url(../../src/img/backgrund-mask.png);
+        background-repeat: repeat;
+        box-shadow: #000  0px 1px 7px;
+        z-index: 50;
+    }
+    &__nav-link{
+        font-size: 2em;
+    }
+}
+
+// === story ===
+.story{
+    &__container{
+        @include center;
+        height: 63.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__content{
+        width: 40%;
+        height: 100%;
+        background-color: #fff;
+        @include cover(url("../../src/img/backgrund-mask.png"));
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image{
+        width: 60%;
+        height: 100%;
+        @include cover(url('../../src/img/story-image.jpg'))
+    }
+}
+
+@media (max-width:540px){
+    .story{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__content{
+            width: 100%;
+        }
+        &__image{
+            width: 100%;
+        }
+    }
+}
+
+// === fresh ===
+.fresh{
+    &__container{
+        @include center;
+        height: 63.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__content{
+        width: 40%;
+        height: 100%;
+        background-color: #fff;
+        @include cover(url("../../src/img/backgrund-mask.png"));
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &::before{
+            @include pseudo;
+            width: 12em;
+            height: 12em;
+            background-image: url('../../src/img/fresh-decor.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: 3em;
+        }
+    }
+    &__image{
+        width: 60%;
+        height: 100%;
+        @include cover(url('../../src/img/fresh-image.jpg'))
+    }
+}
+@media(max-width:540px){
+    .fresh{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__content{
+            width: 100%;
+            order:1;
+            &::before{
+                display: none;
+            }
+        }
+        &__image{
+            width: 100%;
+            order:2;
+        }
+    }
+}
+
+// === local ===
+.local{
+    &__container{
+        @include center;
+        height: 63.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__content{
+        width: 40%;
+        height: 100%;
+        background-color: #fff;
+        @include cover(url("../../src/img/backgrund-mask.png"));
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &::before{
+            @include pseudo;
+            width: 12em;
+            height: 10em;
+            background-image: url('../../src/img/local-decor.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: 3em;
+        }
+    }
+    &__image{
+        width: 60%;
+        height: 100%;
+        @include cover(url('../../src/img/local-image.jpg'))
+    }
+}
+@media (max-width:540px){
+    .local{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__content{
+            width: 100%;
+            &::before{
+                display: none;
+            }
+        }
+        &__image{
+            width: 100%;
+        }
+    }
+}
+// === picture ===
+.picture{
+    @include center;
+    @include cover(url('../../src/img/picture-image.jpg'));
+    height: 73rem;
+}
+@media(max-width:540px){
+    .picture{
+        display: none;
+    }
+}
+
+// === footer ===
+.footer{
+    &__container{
+        background-color:#fff;
+        background-image: url('../../src/img/backgrund-mask.png');
+        @include center;
+        height: 25rem;
+        background-repeat: repeat;
+        padding-top: 5em;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    &__logo{
+        margin-bottom: 3rem;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__contacts{
+        font-family: $font-Neutraface-Bold;
+        font-size: 1.6rem;
+        &-text{
+            padding-bottom: 1em;
+        }
+    }
+    &__social{
+        align-self: flex-end;
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            width: 16rem;
+        }
+        &-item{}
+        &-link{
+            & svg{
+                stroke: #d91f1f;
+            }
+        }
+    }
+}
+
+@media(max-width:960px){
+    html,body{
+        font-size: 9px;
+    }
+}

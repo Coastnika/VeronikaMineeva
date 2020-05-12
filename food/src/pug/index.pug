@@ -1,0 +1,91 @@
+include blocks/content.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(rel="stylesheet", href="build/css/style.css")
+    body
+        .header
+            .header__container
+                .header__nav
+                    .header__logo(class="logo") raw
+                    ul.header__nav-list
+                        li.header__nav-item
+                            a.header__nav-link(href="#story" class="link") story
+                        li.header__nav-item
+                            a.header__nav-link(href="#fresh" class="link") fresh
+                        li.header__nav-item
+                            a.header__nav-link(href="#local" class="link") local
+                        li.header__nav-item
+                            a.header__nav-link(href="#contacts" class="link") contacts
+                .header__menu
+                    .header__menu-hamburger(id="hamburgerTop")
+                    .header__menu-hamburger(id="hamburgerMid")
+                    .header__menu-hamburger(id="hamburgerBot")
+                .header__main
+                    .header__wrapper
+                        .header__content
+                            img(src="src/img/header-main.png")
+                a.header__swipe(href="#story")
+                    include ../../src/img/ARROW.svg
+            .menu-hidden
+                ul.menu-hidden__nav-list
+                    li.menu-hidden__nav-item
+                        a.menu-hidden__nav-link(href="#story" class="link menu-hidden__nav-link--story") story
+                    li.menu-hidden__nav-item
+                        a.menu-hidden__nav-link(href="#fresh" class="link menu-hidden__nav-link--fresh") fresh
+                    li.menu-hidden__nav-item
+                        a.menu-hidden__nav-link(href="#local" class="link menu-hidden__nav-link--local") local
+                    li.menu-hidden__nav-item
+                        a.menu-hidden__nav-link(href="#contacts" class="link menu-hidden__nav-link--contacts") contacts
+        .story(id="story")
+            .story__container
+                .story__wrapper
+                    .story__content
+                        .story__content-wrapper
+                            +content('our story', 'Lorem ipsum dolor sit amet, consectetuer leo semper wisi lacinia, in distinctio, pede suspendisse aliquet nibh tempor arcu in, fermentum praesent iaculis mauris adipiscing mauris. Non dapibus in fusce purus dolor sit, proin aenean, sollicitudin quis ultricies tincidunt duis, varius feugiat dictum id congue suspendisse lectus.')
+                    .story__image
+        .fresh(id="fresh")
+            .fresh__container
+                .fresh__wrapper
+                    .fresh__image
+                    .fresh__content
+                        .fresh__content-wrapper
+                            +content('fresh', 'Lorem ipsum dolor sit amet, consectetuer leo semper wisi lacinia, in distinctio, pede suspendisse aliquet nibh tempor arcu in, fermentum praesent iaculis mauris adipiscing mauris. Non dapibus in fusce purus dolor sit, proin aenean, sollicitudin quis ultricies tincidunt duis, varius feugiat dictum id congue suspendisse lectus.')
+        .local(id="local")
+            .local__container
+                .local__wrapper
+                    .local__content
+                        .local__content-wrapper
+                            +content('LOCAL DISTILLATION', 'Lorem ipsum dolor sit amet, consectetuer leo semper wisi lacinia, in distinctio, pede suspendisse aliquet nibh tempor arcu in, fermentum praesent iaculis mauris adipiscing mauris. Non dapibus in fusce purus dolor sit, proin aenean, sollicitudin quis ultricies tincidunt duis, varius feugiat dictum id congue suspendisse lectus.')
+                    .local__image
+        .picture
+        .footer(id="contacts")
+            .footer__container
+                .footer__logo(class="logo") raw
+                .footer__wrapper
+                    .footer__contacts
+                        .footer__contacts-text addreess 7 <br> 0044 000 000 000
+                        .footer__contacts-text raw@raw.com<br>www.raw.com
+                    .footer__social
+                        ul.footer__social-list
+                            li.footer__social-item
+                                a.footer__social-link(href="")
+                                    include ../../src/img/Twitter.svg
+                            li.footer__social-item
+                                a.footer__social-link(href="")
+                                    include ../../src/img/VK.svg
+                            li.footer__social-item
+                                a.footer__social-link(href="")
+                                    include ../../src/img/instagram.svg
+                            li.footer__social-item
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TimelineLite.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/CSSRulePlugin.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js") 
+        script(src="src/js/hidden-menu.js") 
+        script(src="src/js/scroll.js") 
+
