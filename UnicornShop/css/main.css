@@ -1,0 +1,731 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=McLaren&family=Raleway:wght@400;500;700&family=Roboto&display=swap");
+body {
+  background: #fff; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.outer-container {
+  max-width: 1920px;
+  margin: auto; }
+
+.inner-container {
+  max-width: 1170px;
+  margin: auto; }
+
+.numbers {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px; }
+
+.swiper-container_2 {
+  overflow-x: hidden; }
+
+.header {
+  height: 950px;
+  background-image: url(../img/headerback.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .header_wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .header_burger-menu {
+    display: none;
+    width: 35px;
+    height: 41px;
+    padding-top: 8px; }
+  .header_logo {
+    padding-top: 24px; }
+  .header_mobile-nav {
+    z-index: 9;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    height: 38%;
+    width: 230px;
+    border-radius: 0px 0px 20px 0px;
+    background-color: rgba(225, 64, 135, 0.7);
+    transition: all 0.3s ease-in; }
+    .header_mobile-nav-list {
+      margin-left: 70px;
+      margin-top: 80px; }
+    .header_mobile-nav-item {
+      margin-bottom: 20px; }
+    .header_mobile-nav-link {
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #fff;
+      transition: all 0.3s ease-in; }
+      .header_mobile-nav-link:active {
+        padding-left: 30px; }
+  .header_mobile-nav-active {
+    left: 0; }
+  .header_nav {
+    padding-top: 52px; }
+    .header_nav-list {
+      display: flex;
+      justify-content: space-between;
+      width: 475px; }
+    .header_nav-link {
+      font-family: "Raleway", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #fff;
+      transition: all 0.3s ease-in; }
+      .header_nav-link:hover {
+        color: #e14087; }
+  .header_cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 56px;
+    border: 1px solid #d39cd3;
+    border-radius: 28px;
+    margin-top: 35px;
+    transition: all 0.3s ease-in; }
+    .header_cart:hover {
+      box-shadow: 1px 0px 35px 0px #d39cd3; }
+    .header_cart-content {
+      padding-left: 25px; }
+      .header_cart-content-title {
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff; }
+      .header_cart-content-sum {
+        display: flex; }
+        .header_cart-content-sum-number {
+          font-family: "Roboto", sans-serif;
+          font-size: 14px;
+          letter-spacing: 2px;
+          color: #fff; }
+  .header_content {
+    display: flex;
+    justify-content: space-between; }
+    .header_content-info-title {
+      font-family: "McLaren", cursive;
+      color: #e14087;
+      font-size: 45px;
+      letter-spacing: 2px;
+      padding-top: 235px;
+      padding-bottom: 33px; }
+    .header_content-info-subtitle {
+      font-family: "Raleway", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      color: #fff;
+      line-height: 30px;
+      padding-bottom: 70px;
+      width: 60%; }
+    .header_content-info-btn {
+      font-family: "Raleway", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #fff;
+      width: 365px;
+      height: 84px;
+      border: none;
+      border-radius: 40px;
+      background-color: #fbe608;
+      padding-right: 45px;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease-in; }
+      .header_content-info-btn::after {
+        position: absolute;
+        content: '';
+        background-image: url(../img/right-arrow.svg);
+        background-repeat: no-repeat;
+        width: 66px;
+        height: 43px;
+        margin-top: -9px; }
+      .header_content-info-btn:hover {
+        background-color: #d39cd3; }
+    .header_content-info-socials {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 153px;
+      margin-top: 160px; }
+    .header_content-image {
+      position: absolute;
+      width: 30%;
+      top: 20%;
+      right: 7%; }
+      .header_content-image img {
+        width: 100%; }
+
+.link-arrow {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  margin-left: -19px; }
+
+@media (max-width: 540px) {
+  .header {
+    height: 850px; }
+    .header_wrapper {
+      align-items: center; }
+    .header_burger-menu {
+      display: block; }
+    .header_logo {
+      padding-top: 15px; }
+      .header_logo img {
+        width: 120px;
+        height: 49px; }
+    .header_mobile-nav {
+      display: block; }
+    .header_nav {
+      display: none;
+      padding-top: 32px; }
+    .header_cart {
+      border: none;
+      margin-top: 15px;
+      width: 35px;
+      height: 41px; }
+      .header_cart-content {
+        display: none; }
+    .header_content {
+      justify-content: center; }
+      .header_content-image {
+        display: none; }
+      .header_content-info-title {
+        padding-top: 70px;
+        font-size: 32px;
+        text-align: center; }
+      .header_content-info-subtitle {
+        width: 100%;
+        font-size: 16px; }
+      .header_content-info-btn {
+        width: 325px;
+        height: 64px; }
+      .header_content-info-socials {
+        display: none; } }
+
+.about {
+  height: 686px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .about_container {
+    position: relative; }
+  .about_title {
+    font-family: "McLaren", cursive;
+    font-size: 45px;
+    letter-spacing: 1.5px;
+    color: #e14087;
+    padding-top: 100px;
+    text-align: center; }
+  .about_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 83px;
+    padding-bottom: 50px; }
+    .about_wrapper-card {
+      width: 31.5%;
+      border: none;
+      border-radius: 40px;
+      background-color: #fff;
+      box-shadow: 1px 0px 35px 0px #d39cd3;
+      text-align: center;
+      padding-bottom: 30px; }
+      .about_wrapper-card-image {
+        margin-top: 38px; }
+      .about_wrapper-card-shipped {
+        margin-top: 39px; }
+        .about_wrapper-card-shipped img {
+          height: 146px; }
+      .about_wrapper-card-title {
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        padding-top: 35px;
+        padding-bottom: 30px; }
+      .about_wrapper-card-subtitle {
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 22px;
+        max-width: 341px;
+        margin: auto; }
+  .about .swiper-pagination {
+    position: absolute; }
+  .about .swiper-pagination-bullet {
+    padding: 5px 10px;
+    border-radius: 0;
+    width: 42px;
+    height: 45px;
+    background: none;
+    background-image: url(../img/unicorn2-копия-копия.svg);
+    background-repeat: no-repeat;
+    opacity: 1; }
+  .about .swiper-pagination-bullet-active {
+    background-image: url(../img/unicorn-color.svg); }
+
+@media (max-width: 540px) {
+  .about {
+    height: 586px; }
+    .about_title {
+      font-family: "McLaren", cursive;
+      font-size: 32px;
+      letter-spacing: 1.5px;
+      color: #e14087;
+      padding-top: 50px;
+      text-align: center; }
+    .about_wrapper {
+      padding-bottom: 90px;
+      margin-top: 38px; }
+      .about_wrapper-card {
+        box-shadow: 1px 0px 25px 0px #d39cd3;
+        transform: scale(0.9); } }
+
+.catalog {
+  height: 1461px;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .catalog_cloud-back1 {
+    position: absolute;
+    width: 40%;
+    top: 1%;
+    right: 0; }
+    .catalog_cloud-back1-image {
+      width: 100%; }
+  .catalog_mobtitle {
+    display: none; }
+  .catalog_title {
+    font-family: "McLaren", cursive;
+    font-size: 45px;
+    letter-spacing: 1.5px;
+    color: #e14087;
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 111px; }
+  .catalog_filter {
+    width: 200px;
+    height: 50px;
+    border: 2px solid #d39cd3;
+    border-radius: 20px;
+    display: none; }
+    .catalog_filter-imageRot {
+      transform: scale(-1, 1); }
+    .catalog_filter-title {
+      font-family: "Raleway", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1.5px; }
+  .catalog_choose {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin-bottom: 100px; }
+    .catalog_choose-category {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 277px;
+      height: 80px;
+      border: 2px solid #d39cd3;
+      border-radius: 20px; }
+      .catalog_choose-category-imageRot {
+        transform: scale(-1, 1); }
+      .catalog_choose-category-title {
+        font-family: "Raleway", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1.5px; }
+    .catalog_choose-view {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 186px;
+      height: 80px;
+      border: 2px solid #d39cd3;
+      border-radius: 20px; }
+      .catalog_choose-view-title {
+        font-family: "Raleway", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1.5px; }
+    .catalog_choose-color {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 201px;
+      height: 80px;
+      border: 2px solid #d39cd3;
+      border-radius: 20px; }
+      .catalog_choose-color-title {
+        font-family: "Raleway", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1.5px; }
+  .catalog_items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px; }
+  .catalog_card {
+    width: 362px;
+    height: 357px;
+    box-shadow: 0px 0px 0px 2px #d39cd3;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease-in; }
+    .catalog_card:hover {
+      box-shadow: none; }
+    .catalog_card:hover .catalog_card-wrapper {
+      opacity: 0; }
+    .catalog_card-hover {
+      position: absolute;
+      background-image: url("../img/unicorn-hover.png");
+      background-color: rgba(211, 156, 211, 0.5);
+      background-size: 97% 80%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      border-radius: 30px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 0.3s ease-in; }
+      .catalog_card-hover:hover {
+        opacity: 1; }
+      .catalog_card-hover-button {
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: #fff;
+        width: 177px;
+        height: 43px;
+        border: none;
+        border-radius: 21.5px;
+        background-color: #fbe608;
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+        left: 50%;
+        padding: 10px;
+        bottom: 25px;
+        transition: all 0.3s ease-in;
+        transform: translateX(-50%); }
+        .catalog_card-hover-button:hover {
+          background-color: #d39cd3; }
+    .catalog_card-image {
+      width: 65%;
+      margin: auto;
+      margin-top: 10px;
+      transition: all 0.3s ease-in; }
+      .catalog_card-image img {
+        width: 100%; }
+    .catalog_card:hover .catalog_card-image {
+      margin-top: 30px; }
+    .catalog_card-wrapper {
+      transition: all 0.3s ease-in; }
+    .catalog_card-title {
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      padding-bottom: 15px;
+      padding-top: 15px; }
+    .catalog_card-price {
+      margin-right: 23px;
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      letter-spacing: 1.5px;
+      color: #fff;
+      width: 86px;
+      height: 35px;
+      margin: auto;
+      background-color: #e14087;
+      border-radius: 17.5px;
+      border: none;
+      padding-top: 5px;
+      padding-right: 7px; }
+      .catalog_card-price::after {
+        position: absolute;
+        content: '';
+        background-image: url(../img/ruble-копия.svg);
+        background-repeat: no-repeat;
+        width: 13px;
+        height: 17px;
+        margin-top: 3px; }
+    .catalog_card-sale {
+      position: absolute;
+      width: 147px;
+      height: 141px;
+      top: 0;
+      left: 0; }
+  .catalog_button {
+    display: flex;
+    justify-content: flex-end; }
+  .catalog-btn {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    width: 279px;
+    height: 75px;
+    border: 2px solid #d39cd3;
+    border-radius: 20px;
+    background: no-repeat;
+    padding-right: 45px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in; }
+    .catalog-btn::after {
+      position: absolute;
+      content: '';
+      background-image: url(../img/right-arrow-копия.svg);
+      background-repeat: no-repeat;
+      width: 66px;
+      height: 43px;
+      margin-top: -9px; }
+    .catalog-btn:hover {
+      box-shadow: 1px 0px 35px 0px #d39cd3; }
+
+@media (max-width: 540px) {
+  .catalog {
+    height: 800px; }
+    .catalog_cloud-back1 {
+      width: 90%;
+      top: -1%; }
+    .catalog_mobtitle {
+      display: block;
+      font-family: "McLaren", cursive;
+      font-size: 32px;
+      letter-spacing: 1.5px;
+      color: #e14087;
+      padding-top: 50px;
+      text-align: center;
+      padding-bottom: 50px; }
+    .catalog_title {
+      display: none; }
+    .catalog_filter {
+      display: block;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+    .catalog_choose {
+      display: none; }
+    .catalog_items {
+      margin-bottom: 50px; }
+    .catalog_card {
+      height: 347px; }
+    .catalog-btn {
+      font-size: 18px;
+      width: 219px;
+      height: 55px; }
+      .catalog-btn::after {
+        background-image: url(../img/right-arrow-копия-копия.svg);
+        width: 56px;
+        height: 33px;
+        margin-top: -6px; }
+  .hidden {
+    display: none; } }
+
+.reviews {
+  height: 867px;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .reviews_cloud-back2 {
+    position: absolute;
+    width: 44%;
+    top: -20%;
+    left: 0; }
+    .reviews_cloud-back2-image {
+      width: 100%; }
+  .reviews_title {
+    font-family: "McLaren", cursive;
+    font-size: 45px;
+    letter-spacing: 1.5px;
+    color: #e14087;
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 70px; }
+  .reviews_slide {
+    position: relative; }
+    .reviews_slide-item {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .reviews_slide-item-image {
+        width: 40%;
+        margin-right: 30px;
+        margin-bottom: 61px; }
+        .reviews_slide-item-image img {
+          width: 100%; }
+      .reviews_slide-item-content {
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 34px;
+        width: 466px; }
+  .reviews .swiper-button-next::after {
+    color: #e14087; }
+  .reviews .swiper-button-prev::after {
+    color: #e14087; }
+  .reviews .swiper-pagination {
+    position: absolute; }
+  .reviews .swiper-pagination-bullet {
+    padding: 5px 10px;
+    border-radius: 0;
+    width: 52px;
+    height: 55px;
+    background: none;
+    background-image: url(../img/unicorn2-копия.svg);
+    background-repeat: no-repeat;
+    opacity: 1; }
+  .reviews .swiper-pagination-bullet-active {
+    background-image: url(../img/unicorn-color.svg); }
+
+@media (max-width: 540px) {
+  .reviews {
+    height: 827px; }
+    .reviews_cloud-back2 {
+      width: 80%;
+      top: -10%; }
+    .reviews_slide-item {
+      border-radius: 40px;
+      border: 2px solid #d39cd3;
+      flex-wrap: wrap;
+      margin-bottom: 100px; }
+      .reviews_slide-item-image {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 0px; }
+      .reviews_slide-item-content {
+        font-size: 16px;
+        width: 466px;
+        text-align: center;
+        padding: 0px 10px 10px 10px;
+        line-height: 30px; }
+    .reviews_title {
+      font-family: "McLaren", cursive;
+      font-size: 32px;
+      letter-spacing: 1.5px;
+      color: #e14087;
+      padding-top: 50px;
+      text-align: center;
+      padding-bottom: 60px;
+      padding-top: 0; }
+  .swiper-button-next::after {
+    display: none; }
+  .swiper-button-prev::after {
+    display: none; } }
+
+.contacts {
+  height: 742px;
+  background-image: url(../img/back.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .contacts_title {
+    font-family: "McLaren", cursive;
+    font-size: 45px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    padding-top: 115px;
+    text-align: center; }
+  .contacts_subtitle {
+    font-family: "Raleway", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #fff;
+    padding-top: 60px;
+    padding-bottom: 59px;
+    text-align: center; }
+  .contacts_form {
+    text-align: center; }
+    .contacts_form-input {
+      width: 496px;
+      height: 69px;
+      border: none;
+      border-radius: 34.5px;
+      padding-left: 29px;
+      margin-bottom: 43px;
+      font-size: 18px;
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 1.5px;
+      outline: none; }
+    .contacts_form-btn {
+      font-family: "Raleway", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #fff;
+      width: 308px;
+      height: 69px;
+      border: none;
+      border-radius: 40px;
+      background-color: #fbe608;
+      cursor: pointer;
+      outline: none;
+      margin-top: 9px;
+      margin-bottom: 80px;
+      transition: all 0.3s ease-in; }
+      .contacts_form-btn:hover {
+        background-color: #d39cd3; }
+  .contacts_rights {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-align: center; }
+
+@media (max-width: 540px) {
+  .contacts {
+    height: 640px; }
+    .contacts_title {
+      font-size: 32px;
+      padding-top: 70px; }
+    .contacts_subtitle {
+      font-size: 20px;
+      padding-top: 40px;
+      padding-bottom: 59px; }
+    .contacts_form-input {
+      width: 330px;
+      height: 59px;
+      border: none;
+      border-radius: 34.5px;
+      padding-left: 29px;
+      margin-bottom: 43px;
+      font-size: 18px;
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 1.5px;
+      outline: none; }
+    .contacts_form-btn {
+      width: 290px;
+      height: 64px; } }
