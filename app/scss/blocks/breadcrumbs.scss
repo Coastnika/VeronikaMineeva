@@ -8,6 +8,9 @@
     }
     &__links{ 
         line-height: 180%;
+        &--about{
+            padding-top: 3rem;
+        }
         & a{
             color: #7E7E7E;
             font-weight: 400;
