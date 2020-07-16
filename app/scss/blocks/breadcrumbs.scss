@@ -1,0 +1,18 @@
+.breadcrumbs{
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    padding-top: 1px solid rgba($color: #171717, $alpha: .1);
+    @media (max-width: 540px){
+        padding-top: 4.6rem;
+        padding-bottom: 5rem;
+    }
+    &__links{ 
+        line-height: 180%;
+        & a{
+            color: #7E7E7E;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+        }
+    }
+}

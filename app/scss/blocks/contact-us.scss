@@ -1,0 +1,52 @@
+.contact-us{
+    background-color: $color-main;
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 19rem;
+    }
+    &__wrp{
+        position: relative;
+        margin: auto;
+        transform: translateX(4rem);
+        &::before{
+            position: absolute;
+            content: '';
+            width: 8rem;
+            height: 8rem;
+            background-image: url("../img/blocks/contact-us/svg/mail-icon.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -10rem;
+            top: 50%;
+            transform: translateY(-55%);
+            @media (max-width:540px) {
+                width: 11rem;
+                height: 11rem;
+                left: -12rem;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &__title{
+        font-weight: 800;
+        font-size: 2.4rem;
+        line-height: 180%;
+        text-transform: uppercase;
+        @media (max-width:540px) {
+            font-size: 3.3rem;
+        }
+    }
+    &__email{
+        font-weight: 300;
+        font-size: 2.4rem;
+        line-height: 180%;
+        @media (max-width:540px) {
+            font-size: 3.3rem;
+        }
+    }
+    &__link{
+        color: $color-secondary;
+    }
+}

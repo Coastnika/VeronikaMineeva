@@ -1,0 +1,295 @@
+.preview{
+    // background-color: $color-green53;
+    
+    padding-top: 4rem;
+    margin-bottom: 12rem;
+    @media (max-width:540px){
+        margin-bottom: 3.2rem;
+    }
+    &--addycar{
+        margin-bottom: 3rem;
+        background: linear-gradient(to bottom, $color-blue49 70%, #ffffff 30%);
+        @media (max-width:1280px){
+            background: linear-gradient(to bottom, $color-blue49  69%, #ffffff 21%);
+        }
+        @media (max-width:960px){
+            background: linear-gradient(to bottom, $color-blue49 63%, #ffffff 37%);
+        }
+        @media (max-width:768px){
+            background: linear-gradient(to bottom, $color-blue49 60%, #ffffff 40%);
+        }
+        @media (max-width:540px){
+            background: linear-gradient(to bottom, $color-blue49 65%, #ffffff 35%);
+        }
+    }
+    &--eventhire{
+        background: linear-gradient(to bottom, $color-orange27 80%, #ffffff 20%);
+        @media (max-width:1280px){
+            background: linear-gradient(to bottom, $color-orange27 75%, #ffffff 25%);
+        }
+        @media (max-width:768px){
+            background: linear-gradient(to bottom, $color-orange27 75%, #ffffff 25%);
+        }
+    }
+    &--event{
+        background: linear-gradient(to bottom, $color-green53 70%, #ffffff 30%);
+        @media (max-width:1280px){
+            background: linear-gradient(to bottom, $color-green53 75%, #ffffff 25%);
+        }
+        @media (max-width:768px){
+            background: linear-gradient(to bottom, $color-green53 75%, #ffffff 25%);
+        }
+        @media (max-width:540px){
+            background: linear-gradient(to bottom, $color-green53 70%, #ffffff 20%);
+        }
+    }
+    &--express{
+        background: linear-gradient(to bottom, $color-whiteF1 80%, #ffffff 20%);
+        @media (max-width:1280px){
+            background: linear-gradient(to bottom, $color-whiteF1 75%, #ffffff 25%);
+        }
+        @media (max-width:768px){
+            background: linear-gradient(to bottom, $color-whiteF1 75%, #ffffff 25%);
+        }
+    }
+    &--environments{
+        background: linear-gradient(to bottom, $color-yellowA8 80%, #ffffff 20%);
+        @media (max-width:1280px){
+            background: linear-gradient(to bottom, $color-yellowA8 75%, #ffffff 25%);
+        }
+        @media (max-width:768px){
+            background: linear-gradient(to bottom, $color-yellowA8 75%, #ffffff 25%);
+        }
+    }
+
+    
+    &__wrp{
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:540px) {
+            display: block;
+        }
+    }
+    &__content{
+        padding-top: 3rem;
+        &--addycar{
+        }
+        @media(max-width:1280px){
+            padding-top: 2rem;
+        }
+        &-caption{
+            font-weight: 600;
+            font-size: 1.6rem;
+            letter-spacing: 0.1em;
+            color: $color-white;
+            width: 11.7rem;
+            height: 3.6rem;
+            background: $color-secondary;
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            @media (max-width: 540px){
+                font-size: 2.5rem;
+                width: 19.7rem;
+                height: 6rem;
+            }
+            
+        }
+        &-title{
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 7.2rem;
+            color: $color-white;
+            padding-left: 2rem;
+            position: relative;
+            @media (max-width: 540px){
+                font-size: 28px;
+                padding-left: 4rem;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                width: 0.6rem;
+                height: 50%;
+                background: $color-white;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                @media (max-width: 540px){
+                    width: 1.1rem;
+                    height: 50%;
+                    bottom: 1.1rem;
+                }
+            }
+            &--express{
+                color: $color-secondary;
+                &::before{
+                    background-color: $color-secondary;
+                }
+            }
+        }
+        &-subtitle{
+            font-size: 1.8rem;
+            line-height: 1.6em;
+            letter-spacing: 0.1em;
+            color: $color-white;
+            width: 80%;
+            padding-top: 0.3rem;
+            @media (max-width: 540px){
+                width: 100%;
+                font-size: 14px;
+                margin-bottom: 4rem;
+            }
+            &--express{
+                color: $color-secondary;
+            }
+            &--addycar{
+                width: 100%;
+            }
+            &--environments{
+               @media (max-width:540px) {
+                padding-left: 4rem;
+               }
+            }
+        }  
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        padding-top: 9.5rem;
+        @media (max-width: 768px){
+            padding-top: 6rem;
+        }
+        @media (max-width: 540px){
+            justify-content: center;
+        }
+        
+        &--desktop{
+            @media (max-width: 540px){
+            display: none;
+            }
+        }
+        &--mobile{
+            @media (min-width: 541px) {
+                display: none;
+            }
+        }
+        &--addycar{
+            @media (max-width: 540px){
+               padding-top: 0rem;
+            }
+        }
+        &-title{
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 3.2rem;
+            letter-spacing: 0.05em;
+            color: $color-secondary;
+            padding-left: 2.1rem;
+            @media (max-width:540px) {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 180%;
+            }
+        }
+    }
+    &__apps-wrap{
+        display: flex;
+        align-items: center;
+        padding-top: 3.3rem;
+        @media (max-width: 540px){
+            justify-content: center;
+        }
+        &--desktop{
+            @media (max-width: 540px){
+            display: none;
+            }
+        }
+        &--mobile{
+            @media (min-width: 541px) {
+                display: none;
+            }
+        }
+    }
+    &__apps-link:last-child{
+        padding: 0;
+    }
+    &__apps-link{
+        padding-right: 2rem;
+    }
+    &__image{
+        width: 50%;
+        transform: translateX(-10%);
+        @media (max-width:540px){
+            width: 100%;
+            transform: translateX(0);
+        }
+        & img{
+            width: 100%;
+        }
+        &--addycar{
+            width: 75%;
+            transform: translate(0);
+            padding-top: 7rem;
+            @media (max-width:540px){
+                width: 100%;
+                transform: translateX(0);
+                transform: translateY(-10%);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

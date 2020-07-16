@@ -1,0 +1,153 @@
+.header-hidden{
+    &__logo{
+        position: absolute  ;
+        top: 5rem;
+        left: 5rem;
+        @media (min-width:541px) {
+            display: none;
+        }
+    }
+    &__menu{
+        position: fixed;
+        top: -140%;
+        left: 0;
+        right: 0;
+        height: 110vh;
+        z-index: 999;
+        background-color: $color-white;
+        transition: $transition;
+        @media (min-width:541px) {
+            display: none;
+        }
+        &--decoration{
+            position: absolute;
+            bottom: -8%;
+            right: 0;
+            z-index: 1;
+            height: 49%;
+            & img{
+                height: 100%;
+            }
+        }
+        &--active{
+            top: 0;
+        }
+    }
+    &__menu-toggle{
+        z-index: 99999;
+        position: absolute;
+        top: 28px;
+        right: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: $transition;
+        &--active{
+            position: fixed;
+        }
+        @media (min-width:541px) {
+            display: none;
+        }
+    }
+    &__close--services{
+        text-align: center;
+        position: relative;
+        & p{
+           
+            font-size: 4rem;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            border-bottom: 5px solid $color-black;
+            padding-bottom: .5rem;
+            margin-bottom: 5rem;
+        }
+        & svg{
+            position: absolute;
+            left: 10%;
+            top: 15%;
+        }
+    }
+    &__nav{
+        margin-top: 37%;
+        &-list{
+            &--services{
+                position: absolute;
+                top: 45%;
+                bottom: 0;
+                left: -150%;
+                transform: translate(-50%, -50%);
+                transition: $transition;
+                background-color: $color-white;
+                width: 100vw;
+                height: 110vh;
+                padding-top: 40%;
+                & .header-hidden__nav-item{
+                    margin-bottom: 2rem;
+                }
+                &--active{
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        &-item{
+            text-align: center;
+            margin-bottom: 41px;
+            width: 100%;
+        }
+        &-link{
+            color: $color-black1D;
+            font-size: 18px;
+            line-height: 180%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            &--services{
+                width: 120px;
+                margin: auto;
+                position: relative;
+                cursor: pointer;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    background-image: url("../img/blocks/header/svg/services-arrow.svg");
+                    background-repeat: no-repeat;
+                    width: 15px;
+                    height: 10px;
+                    right: -5px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: $transition;
+                }
+            }
+            
+        }
+        
+    }
+}
+.menu__hamburger{
+    &--first{
+        &--active{
+            transform: rotate(45deg) translateY(10px);
+        }
+    }
+    &--mid{
+        &--active{
+            opacity: 0;
+        }
+    }
+    &--last{
+        &--active{
+            transform: rotate(-45deg) translateY(-10px);
+        }
+    }
+    &-item{
+        width: 27px;
+        height: 3px;
+        background-color: $color-black;
+        transition: $transition;
+        &:not(:last-child){
+            margin-bottom: 4px;
+        }
+        
+    }
+}

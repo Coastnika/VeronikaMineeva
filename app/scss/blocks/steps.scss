@@ -1,0 +1,262 @@
+.steps{
+    padding-bottom: 20rem;
+    z-index: 0;
+    @media (max-width:540px){
+        padding-bottom: 4rem;
+    }
+    &__wrp{
+        background-color: $color-whiteF1;
+        position: relative;
+    }
+    &__title-container{
+        padding: 12rem 0 32rem 0;
+        @media (max-width:540px){
+            padding: 16rem 0rem 32rem 0rem;
+        }
+    }
+    &__title{
+        position: relative;
+        font-weight: bold;
+        font-size: 3rem;
+        text-transform: uppercase;
+        padding-left: 4.5rem;
+        padding-top: 5rem;
+        @media (max-width:540px) {
+            font-size: 4.1rem;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            width: 1rem;
+            height: 100%;
+            border-left: 2px solid $color-secondary;
+            border-right: 2px solid $color-secondary;
+            left: 0;
+            bottom: 0;
+            @media (max-width:540px) {
+                height: 17rem;
+                width: 1.8rem;
+                bottom: 0rem;
+            }
+        }
+    }
+    &__content{
+        @media (max-width:540px){
+            display: block;
+        }
+    }
+    &__box-wrp{
+        position: relative;
+        z-index: 100;
+    }
+    &__box-number{
+        height: 7.2rem;
+        width: 7.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-main;
+        font-weight: 900;
+        font-size: 2.4rem;
+        position: absolute;
+        left: 0;
+        top: -10.5rem;
+    }
+    &__box-title{
+        margin-bottom: .5rem;
+        h3{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: $color-secondary;
+            line-height: 3.6rem;
+            @media (max-width:540px){
+                font-size: 3.2rem;
+                line-height: 180%;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    &__box-text{
+        p{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: $color-secondary;
+            line-height: 1.8em;
+            @media (max-width:540px) {
+                font-size: 2.8rem;
+            }
+        }
+    }
+    &__box-item{
+        position: relative;
+        padding: 7rem 8rem 2rem 8rem;
+        border: 1px solid $color-grayE4;
+        background-color: $color-white;
+        min-height: 27rem;
+        width: 48.7%;
+        @media (max-width:540px) {
+            width: 100%;
+            margin: auto;
+            margin-bottom: 10rem;
+            min-height: 57rem;
+            padding: 8rem 4rem 0rem 4rem;
+        }
+        
+        &--workshop{
+            align-self: flex-start;
+        }
+        &--design{
+            align-self: flex-end;
+        }
+        &--mvp{
+            align-self: flex-start;
+        }
+        &--scale{
+            align-self: flex-end;
+        }
+        &--support{
+            align-self: flex-start;
+        }
+        &:not(:last-child){
+            @media (max-width:1280px) {
+               
+            }
+        }
+    }
+    &__col{
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        height: 40rem;
+        @media (max-width:540px) {
+            display: block;
+            height: auto;
+        }
+        &:not(:last-child){
+            margin-bottom: 3.5rem;
+            @media (max-width:540px) {
+                margin-bottom: 0rem;
+            }
+        }
+    }
+    &__items-wrp{
+        position: relative;
+        margin-top: -21rem;
+    }
+    &__sm-black-tr{
+        position: absolute;
+        top: -1.5rem;
+        left: 45%;
+        & svg{
+            width: 4.3rem;
+            height: 3.4rem;
+        }
+    }
+    &__sm-gray-tr{
+        position: absolute;
+        left: 63%;
+        top: 26%;
+        & svg{
+            width: 4.3rem;
+            height: 3.4rem;
+        }
+    }
+    &__md-tr{
+        position: absolute;
+        left: 67%;
+        top: 26%;
+        & svg{
+            width: 18.6rem;
+            height: 14.8rem;
+        }
+    }
+    &__sm-yell-tr{
+        position: absolute;
+        left: 81%;
+        top: 44%;
+        & svg{
+            width: 6.7rem;
+            height: 5.4rem;
+        }
+    }
+    &__lg-tr{
+        display: flex;
+        width: 25.7rem;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: -31.8rem;
+        @media (max-width:1280px) {
+            right: -8rem;
+            top: -11.8rem;
+        }
+        & svg{
+            width: 64.4rem;
+            height: 96.4rem;
+            @media (max-width:1280px) {
+                width: 40rem;
+                height: 40rem;
+            }
+        }
+    }
+    &__lg-border-tr{
+        display: flex;
+        width: 25.7rem;
+        position: absolute;
+        right: 0;
+        top: -40.5rem;
+        @media (max-width:1280px) {
+            right: -9.5rem;
+            top: -20.5rem;
+        }
+        
+        
+        & svg{
+            width: 64.4rem;
+            height: 96.4rem;
+            @media (max-width:1280px) {
+                width: 40rem;
+                height: 50rem;
+            }
+        }
+        &--rotate{
+            left: -2%;
+            top: 9%;
+            transform: rotate(-180deg);
+            z-index: -2;
+            @media (max-width:1280px) {
+                left: -8%;
+                top: 6.3%;
+            }
+        }
+    }
+
+    &__lg-tr-black{
+        position: absolute;
+        left: -11%;
+        top: 17%;
+        width: 64.4rem;
+        display: flex;
+        overflow: hidden;
+        z-index: -1;
+        @media (max-width:1280px) {
+            left: -12.5%;
+            top: 8.5%;
+        }
+        @media (max-width:540px) {
+            top: 28.5%;
+        }
+        & svg{
+            width: 64.4rem;
+            height: 96.4rem;
+            @media (max-width:1280px) {
+                width: 40rem;
+                height: 50rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.outcomes{
+    padding-top: 27rem;
+    padding-bottom: 28.9rem;
+    @media (max-width: 540px){
+        padding-top: 15rem;
+        padding-bottom: 20rem;
+    }
+    &__content{
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        @media (max-width: 540px){
+            flex-direction: column;
+            width: 100%;
+        }
+        &--express{
+            width: 100%;
+        }
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 180%;
+        position: relative;
+        padding-left: 4rem;
+        align-self: center;
+        @media (max-width: 540px){
+            align-self: start;
+            font-size: 22px;
+            margin-bottom: 3rem;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            width: 1rem;
+            height: 8.3rem;
+            border-left: 2px solid $color-black;
+            border-right: 2px solid $color-black;
+            bottom: 1.5rem;
+            left: 0;
+            @media (max-width: 540px){
+                padding-left: 1rem;
+            }
+        }
+    }
+    &__count{
+        text-align: center;
+        @media (max-width:540px) {
+            &:not(:last-child){
+                margin-bottom: 6rem;
+            }
+            &--express{
+                width: 25%;
+                @media (max-width:540px) {
+                    width: 100%;
+                }
+            }
+        }
+        &-number{
+            font-weight: 800;
+            font-size: 5rem;
+            line-height: 200%;
+            letter-spacing: 0.1em;
+            color: $color-black1D;
+            text-align: center;
+            position: relative;
+            @media (max-width:540px) {
+                font-size: 32px;
+            }
+            &--under{
+                display: inline-block;
+                &::before{
+                    content: 'st';
+                    position: absolute;
+                    letter-spacing: 0em;
+                    right: -1rem;
+                    top: -2rem;
+                    font-size: 1.5rem;
+                }
+            }
+            
+        }
+        &-text{
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 3.5rem;
+            letter-spacing: 0.1em;
+            color: $color-secondary;
+            text-align: center;
+            margin: auto;
+            &--addycar{
+                width: 70%;
+                @media (max-width:540px) {
+                    width: 100%;
+                    line-height: 4.5rem;
+                }
+            }
+            &--express{
+                width: 80%;
+            }
+            @media (max-width: 540px){
+                font-size: 2.5rem;
+                line-height: 4.5rem;
+            }
+        }
+    }
+}
