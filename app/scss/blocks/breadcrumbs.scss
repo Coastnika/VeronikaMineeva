@@ -11,14 +11,23 @@
     }
     &__links{ 
         line-height: 180%;
-    }
+        &--about{
+            padding-top: 3rem;
+        }
+        & a{
+            color: #7E7E7E;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+        }
     &__link{
         color: #7E7E7E;
         font-weight: 400;
         font-size: 16px;
         letter-spacing: 0.1em;
-        &--careers{
-            color: $color-secondary;
+            &--careers{
+                color: $color-secondary;
+            }
         }
     }
 }
