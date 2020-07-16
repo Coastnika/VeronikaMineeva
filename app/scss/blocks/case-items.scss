@@ -251,16 +251,14 @@
                 height: 0.3rem;
                 width: 5rem;
                 background: $color-secondary;
-                bottom: 0rem;
+                bottom: -1.8rem;
                 left: 3rem;
                 @media (max-width: 540px){
                     left: 4.4rem;
                 }
             }
             &--environment{
-                &::before{
-                }
-                
+                line-height: 120%;
             }
         }
         &-subtitle{          

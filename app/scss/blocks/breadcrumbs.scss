@@ -2,6 +2,9 @@
     padding-top: 3rem;
     padding-bottom: 4rem;
     padding-top: 1px solid rgba($color: #171717, $alpha: .1);
+    &--careers{
+        padding-bottom: 7.9rem;
+    }
     @media (max-width: 540px){
         padding-top: 4.6rem;
         padding-bottom: 5rem;
@@ -16,6 +19,15 @@
             font-weight: 400;
             font-size: 16px;
             letter-spacing: 0.1em;
+        }
+    &__link{
+        color: #7E7E7E;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+            &--careers{
+                color: $color-secondary;
+            }
         }
     }
 }
