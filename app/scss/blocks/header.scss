@@ -47,7 +47,7 @@
         right: 0;
         top: 16%;
         width: 35%;
-        @media (min-width:1400px) and (max-width:1900px){
+        @media (min-width:1281px) and (max-width:1900px){
             width: 30%;
             top: 25%;
         }
@@ -324,6 +324,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            
             @media (max-width:540px) {
                 width: 42rem;
                 height: 10.3rem;
@@ -332,6 +333,15 @@
             &:hover{
                 background: $color-white;
                 color: $color-black;
+            }
+            &--about{
+                border: 1px solid $color-black;
+                background: $color-white;
+                color: $color-black;
+                &:hover{
+                    background: $color-black;
+                    color: $color-white;
+                }
             }
         }
     }
