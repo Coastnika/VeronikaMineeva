@@ -258,7 +258,10 @@
                 }
             }
             &--environment{
-                line-height: 120%;
+                line-height: 180%;
+                @media (max-width:540px) {
+                    line-height: 120%;
+                }
             }
         }
         &-subtitle{          

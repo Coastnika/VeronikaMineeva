@@ -141,7 +141,7 @@ window.onload = function() {
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 
-function particles(){
+function particlesIndex(){
   let indexPage = document.querySelector('#indexPage');
   if(indexPage){
     particlesJS.load('particles-js', './json/particlesjs-config.json', function() {
@@ -152,8 +152,18 @@ function particles(){
     });
   }
 }
-particles();
- 
+particlesIndex();
+
+function particlesAbout(){
+  let aboutPage = document.querySelector('#aboutPage')
+  if(aboutPage){
+    particlesJS.load('particles-js', './json/particlesjs-config.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  }
+}
+particlesAbout()
+
 
 //**** popup ****
 
@@ -202,3 +212,32 @@ for (let anchor of anchors){
   img.removeAttribute('data-src');
   };
 });
+
+
+
+// ***** about-slider ******
+function aboutSlider(){
+  let about = document.querySelector('.slider__swiper-container');
+
+  if(about){
+    var swiperAbout = new Swiper('.slider__swiper-container', {
+      breakpoints: {
+        // when window width is >= 320px
+        540: {
+          direction: 'vertical',
+        },
+      },
+      
+      autoplay: {
+        delay: 5000,
+      },
+      spaceBetween: 100,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
+}
+aboutSlider();
