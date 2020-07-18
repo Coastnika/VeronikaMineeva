@@ -1,0 +1,149 @@
+.openings{
+    padding-bottom: 15rem;
+    &__wrap{
+        display: flex;
+        @media (max-width: 540px){
+           flex-direction: column;
+        }
+    }
+    &__content{
+        padding-top: 19.5rem;
+        margin-right: 30rem;
+        @media (max-width: 540px){
+            margin:0;
+        }
+        &-title{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 3rem;
+            line-height: 180%;
+            position: relative;
+            padding-left: 4rem;
+            align-self: center;
+            color: $color-secondary;
+            @media (max-width: 540px){
+                font-size: 4.4rem;
+                padding-left: 5.5rem;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                width: 1rem;
+                height: 83px;
+                border-left: 2px solid $color-secondary;
+                border-right: 2px solid $color-secondary;
+                bottom: 1.5rem;
+                left: 0;
+                @media (max-width: 540px){
+                    padding-left: 1.5rem;
+                }
+            }
+        }
+        &-subtitle{
+            font-weight: 300;
+            font-size: 2rem;
+            line-height: 180%;
+            letter-spacing: 0.1em;
+            color: $color-secondary;
+            padding-top: 2.4rem;
+            @media (max-width: 540px){
+                font-size: 2.8rem;
+                line-height: 220%;
+            }
+        }
+        &-address-link{
+            color: $color-secondary;
+        }
+    }
+    &__links{
+        padding-top: 15rem;
+        @media (max-width: 540px){
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+    }
+    &__link-wrap{
+        display: flex;
+    }
+    &__link{
+        position: relative;
+        border: 1px solid $color-grayE4;
+        width: 35rem;
+        height: 14.8rem;
+        padding: 4.1rem 6rem 4.1rem 3rem;
+        margin-bottom: 3rem;
+        @media (max-width: 540px){
+            width: 67rem;
+            height: 24.4rem;
+            padding: 6.2rem 4.4rem 6.2rem 4.4rem;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $color-main;
+            transition: $transition;
+        }
+        &:hover::before{
+            width: 100%;
+        }
+        &:hover{
+            border: none;
+            width: 47rem;
+            @media (max-width: 540px){
+                width: 67rem;
+            }
+        }
+        &-title{
+            position: relative;
+            font-weight: bold;
+            font-size: 2rem;
+            line-height: 180%;
+            text-transform: uppercase;
+            color: $color-secondary;
+            padding-left: 1.2rem;
+            @media (max-width: 540px){
+                font-size: 3.2rem;
+                padding-left: 2rem;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                width: 0.4rem;
+                height: 50%;
+                background: $color-secondary;
+                left: 0;
+                top: 20%;
+            }
+        }
+        &-subtitle{
+            position: relative;
+            font-weight: 300;
+            font-size: 1.6rem;
+            line-height: 180%;
+            letter-spacing: 0.1em;
+            color: $color-secondary;
+            padding-top: 0.1rem;
+            @media (max-width: 540px){
+                font-size: 2.8rem;
+                padding-top: 1rem;
+            }
+        }
+    }
+    &__arrow{
+        padding: 7.3rem 5rem 7.3rem 5rem;
+        border-top: 1px solid $color-grayE4;
+        border-right: 1px solid $color-grayE4;
+        border-bottom: 1px solid $color-grayE4;
+        width: 12.2rem;
+        height: 14.8rem;
+        @media (max-width: 540px){
+            width: 12.6rem;
+            height: 24.4rem;
+            padding: 12.2rem 4.6rem 12.2rem 4.6rem;
+        }
+    }
+}
