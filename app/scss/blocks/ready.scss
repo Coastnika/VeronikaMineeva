@@ -1,5 +1,36 @@
 .ready{
-    background: linear-gradient(to bottom, $color-main 50%, #ffffff 50%);
+    background: linear-gradient(to right, $color-main 50%, #ffffff 50%);
+    @media (max-width: 540px){
+        background: $color-main;
+    }
+    &__wrap{
+        position: relative;
+    }
+    &-triangles-group1{
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        width: 30%;
+        & img{
+            width: 100%;
+        }
+        @media (max-width: 540px){
+            width: 70%;
+            left: 30%;
+        }
+    }
+    &-triangles-group2{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        width: 40%;
+        & img{
+            width: 100%;
+        }
+        @media (max-width: 540px){
+            display: none;
+        }
+    }
     &__title{
         position: relative;
         font-weight: 300;
@@ -7,13 +38,23 @@
         line-height: 150%;  
         color: $color-secondary;
         padding-bottom: 13.9rem;
+        padding-left: 2rem;
+        @media (max-width: 540px){
+            font-size: 5.6rem;
+        }
         &::before{
             position: absolute;
             content: '';
             width: 1rem;
-            height: 10.8rem;
+            height: 38%;
             background: $color-secondary;
-            padding-left: 1.2rem;
+            left: 0;
+            top: 50%;
+            transform: translateY(-115%);
+            @media (max-width: 540px){
+                height: 42%;
+                transform: translateY(-105%);
+            }
         }
     }
 }
