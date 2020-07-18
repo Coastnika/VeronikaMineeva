@@ -221,7 +221,13 @@ function aboutSlider(){
 
   if(about){
     var swiperAbout = new Swiper('.slider__swiper-container', {
-      direction: 'vertical',
+      breakpoints: {
+        // when window width is >= 320px
+        540: {
+          direction: 'vertical',
+        },
+      },
+      
       autoplay: {
         delay: 5000,
       },
