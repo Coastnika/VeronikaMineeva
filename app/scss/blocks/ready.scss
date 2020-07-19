@@ -6,20 +6,34 @@
     &__wrap{
         position: relative;
     }
-    &-triangles-group1{
+    &-triangles-white{
         position: absolute;
         top: 15%;
-        left: 15%;
-        width: 30%;
+        right: 56%;
+        width: 4%;
         & img{
             width: 100%;
         }
         @media (max-width: 540px){
-            width: 70%;
-            left: 30%;
+            right:0;
+            width: 6%;
         }
     }
-    &-triangles-group2{
+    &-triangles-border{
+        position: absolute;
+        top: 83%;
+        right: 83%;
+        width: 2%;
+        & img{
+            width: 100%;
+        }
+        @media (max-width: 540px){
+            top: 78%;
+            right: 40%;
+            width: 6%;
+        }
+    }
+    &-triangles-group{
         position: absolute;
         top: 10%;
         right: 5%;
