@@ -1,5 +1,8 @@
-.kingscross-office{
-    padding-bottom: 20rem;
+.office{
+    padding-bottom: 5rem;
+    &__content{
+        padding-bottom: 15rem;
+    }
     &__title{
         text-transform: uppercase;
         font-weight: bold;
