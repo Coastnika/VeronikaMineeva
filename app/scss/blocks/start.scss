@@ -1,0 +1,40 @@
+.start{
+    background-color: $color-main;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    
+    &__title{
+        font-weight: 800;
+        font-size: 24px;  
+        line-height: 180%;
+        color: $color-secondary;  
+        text-transform: uppercase;  
+        margin-bottom: 25px;  
+        @media (max-width:540px) {
+            font-size: 24px;
+        }
+    }
+    &__button{}
+    &__link{
+        background-color: $color-secondary;
+        width: 300px;
+        height: 60px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        font-size: 18px;
+        font-weight: 800;
+        border: 1px solid $color-secondary;
+        transition: $transition;
+        @media (max-width:540px) {
+            font-size: 16px;
+        }
+        &:hover{
+            background-color: $color-main;
+            color: $color-secondary;
+        }
+    }
+}

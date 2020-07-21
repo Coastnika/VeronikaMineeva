@@ -155,8 +155,11 @@ function particlesIndex(){
 particlesIndex();
 
 function particlesAbout(){
-  let aboutPage = document.querySelector('#aboutPage')
-  if(aboutPage){
+  let aboutPage = document.querySelector('#aboutPage');
+  let careersPage = document.querySelector('#careersPage');
+  let servicesPage = document.querySelector('#servicesPage');
+
+  if(aboutPage || careersPage || servicesPage){
     particlesJS.load('particles-js', './json/particlesjs-config.json', function() {
       console.log('callback - particles.js config loaded');
     });

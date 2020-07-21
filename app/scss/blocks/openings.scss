@@ -3,6 +3,9 @@
     &__init-animation:hover .openings__link{
         &::before{
             width: 100%;
+            @media (max-width: 768px) {
+                opacity: 1;
+            }
         }
         width: 47rem;
         @media (max-width: 1024px){
@@ -21,6 +24,9 @@
     &__content{
         padding-top: 19.5rem;
         margin-right: 30rem;
+        @media (max-width: 1280px){
+            margin-right: 25rem;
+        }
         @media (max-width: 1024px){
             margin-right: 15rem;
         }
@@ -78,23 +84,26 @@
         }
     }
     &__link-wrap{
+        margin-bottom: 3rem;
         a {
             display: flex;
-            margin-bottom: 3rem;
+            
         }
     }
     &__link{
         position: relative;
         border: 1px solid $color-grayE4;
         width: 35rem;
-        height: 14.8rem;
-        padding: 4.1rem 6rem 4.1rem 3rem;
         transition: $transition;
+        padding-left: 3rem;
+        display: flex;
+        align-items: center;
+        height: 14.8rem;
         @media (max-width: 540px){
             width: 67rem;
-            height: 24.4rem;
-            padding: 6.2rem 4.4rem 6.2rem 4.4rem;
+            height: 24.4rem;    
         }
+        
         &::before{
             position: absolute;
             content: '';
@@ -104,8 +113,12 @@
             height: 100%;
             background: $color-main;
             transition: $transition;
+            @media (max-width:768px) {
+                width: 100%;
+                opacity: 0;
+            }
         }
-       
+        
         &-title{
             position: relative;
             font-weight: bold;
@@ -143,12 +156,13 @@
         }
     }
     &__arrow{
-        padding: 7.3rem 5rem 7.3rem 5rem;
         border-top: 1px solid $color-grayE4;
         border-right: 1px solid $color-grayE4;
         border-bottom: 1px solid $color-grayE4;
         width: 12.2rem;
-        height: 14.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @media (max-width: 540px){
             width: 12.6rem;
             height: 24.4rem;
