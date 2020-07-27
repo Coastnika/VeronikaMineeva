@@ -2,12 +2,18 @@
     &__wrap{
         position: relative;
         margin-bottom: 6.9rem;
+        &--blog{
+            margin-bottom: 0;
+        }
     }
     &-triangles{
         position: absolute;
         right: 0;
         bottom: -1.5rem;
         width: 55%;
+        &--blog{
+            width: 50%;
+        }
         & img{
             width: 100%;
         }
@@ -17,24 +23,26 @@
     }
     &__content{
         &-title{
-            position: relative;
-            font-weight: 800;
-            font-size: 4.8rem;
-            line-height: 7.2rem;
-            color: $color-secondary;
-            padding-top: 2rem;
-            padding-left: 3rem;
-            @media (max-width: 540px){
-                font-size: 5.6rem;
-            }
-            &::before{
-                position: absolute;
-                content: '';
-                width: 1rem;
-                height: 4.2rem;
-                background: $color-secondary;
-                top: 3.1rem;
-                left: 0.3rem;
+           h1{
+                position: relative;
+                font-weight: 800;
+                font-size: 4.8rem;
+                line-height: 7.2rem;
+                color: $color-secondary;
+                padding-top: 2rem;
+                padding-left: 3rem;
+                @media (max-width: 540px){
+                    font-size: 5.6rem;
+                }
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 1rem;
+                    height: 4.2rem;
+                    background: $color-secondary;
+                    top: 3.1rem;
+                    left: 0.3rem;
+                }
             }
         }
         &-subtitle{
@@ -115,16 +123,18 @@
             height: 59.8rem;
         }
         &-title{
-            font-weight: bold;
-            font-size: 2.4rem;
-            line-height: 180%;
-            color: $color-white;
-            padding-left: 3rem;
-            padding-top: 5.1rem;
-            @media (max-width: 540px){
-                font-size: 4.4rem;
-                padding-top: 7.6rem;
-                padding-left: 4.4rem;
+           h3{
+                font-weight: bold;
+                font-size: 2.4rem;
+                line-height: 180%;
+                color: $color-white;
+                padding-left: 3rem;
+                padding-top: 5.1rem;
+                @media (max-width: 540px){
+                    font-size: 4.4rem;
+                    padding-top: 7.6rem;
+                    padding-left: 4.4rem;
+                }
             }
         }
         &-image{
@@ -150,16 +160,18 @@
             height: 59.8rem;
         }
         &-title{
-            font-weight: bold;
-            font-size: 2.4rem;
-            line-height: 180%;
-            color: $color-white;
-            padding-left: 3rem;
-            padding-top: 5.1rem;
-            @media (max-width: 540px){
-                font-size: 4.4rem;
-                padding-top: 7.6rem;
-                padding-left: 4.4rem;
+            h3{
+                font-weight: bold;
+                font-size: 2.4rem;
+                line-height: 180%;
+                color: $color-white;
+                padding-left: 3rem;
+                padding-top: 5.1rem;
+                @media (max-width: 540px){
+                    font-size: 4.4rem;
+                    padding-top: 7.6rem;
+                    padding-left: 4.4rem;
+                }
             }
         }
         &-image{
@@ -193,33 +205,35 @@
             margin-right: 0;
         }
         &-title{
-            font-weight: bold;
-            font-size: 2.4rem;
-            line-height: 180%;
-            color: $color-white;
-            padding-left: 3rem;
-            padding-top: 5.1rem;
-            &--environment{
-                @media (max-width: 1280px){
-                    width: 80%;
+            h3{
+                font-weight: bold;
+                font-size: 2.4rem;
+                line-height: 180%;
+                color: $color-white;
+                padding-left: 3rem;
+                padding-top: 5.1rem;
+                &--environment{
+                    @media (max-width: 1280px){
+                        width: 80%;
+                    }
+                    @media (max-width: 768px){
+                        width: 70%;
+                    }
                 }
-                @media (max-width: 768px){
+                @media (max-width: 540px){
+                    width: 100%;
+                    line-height: 120%;
+                    font-size: 4.4rem;
+                    padding-top: 5rem;
+                    padding-left: 4.4rem;
+                }
+                @media (max-width: 375px){
                     width: 70%;
+                    line-height: 120%;
+                    font-size: 4.4rem;
+                    padding-top: 5rem;
+                    padding-left: 4.4rem;
                 }
-            }
-            @media (max-width: 540px){
-                width: 100%;
-                line-height: 120%;
-                font-size: 4.4rem;
-                padding-top: 5rem;
-                padding-left: 4.4rem;
-            }
-            @media (max-width: 375px){
-                width: 70%;
-                line-height: 120%;
-                font-size: 4.4rem;
-                padding-top: 5rem;
-                padding-left: 4.4rem;
             }
         }
         &-image{
@@ -243,16 +257,18 @@
             margin-right: 0;
         }
         &-title{
-            font-weight: bold;
-            font-size: 2.4rem;
-            line-height: 180%;
-            color: $color-secondary;
-            padding-left: 3rem;
-            padding-top: 5.1rem;
-            @media (max-width: 540px){
-                font-size: 4.4rem;
-                padding-top: 7.6rem;
-                padding-left: 4.4rem;
+            h3{
+                font-weight: bold;
+                font-size: 2.4rem;
+                line-height: 180%;
+                color: $color-secondary;
+                padding-left: 3rem;
+                padding-top: 5.1rem;
+                @media (max-width: 540px){
+                    font-size: 4.4rem;
+                    padding-top: 7.6rem;
+                    padding-left: 4.4rem;
+                }
             }
         }
         &-image{

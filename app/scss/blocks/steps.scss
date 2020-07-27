@@ -15,28 +15,30 @@
         }
     }
     &__title{
-        position: relative;
-        font-weight: bold;
-        font-size: 3rem;
-        text-transform: uppercase;
-        padding-left: 4.5rem;
-        padding-top: 5rem;
-        @media (max-width:540px) {
-            font-size: 4.1rem;
-        }
-        &::before{
-            position: absolute;
-            content: '';
-            width: 1rem;
-            height: 100%;
-            border-left: 2px solid $color-secondary;
-            border-right: 2px solid $color-secondary;
-            left: 0;
-            bottom: 0;
+        h3 {
+            position: relative;
+            font-weight: bold;
+            font-size: 3rem;
+            text-transform: uppercase;
+            padding-left: 4.5rem;
+            padding-top: 5rem;
             @media (max-width:540px) {
-                height: 17rem;
-                width: 1.8rem;
-                bottom: 0rem;
+                font-size: 4.1rem;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                width: 1rem;
+                height: 100%;
+                border-left: 2px solid $color-secondary;
+                border-right: 2px solid $color-secondary;
+                left: 0;
+                bottom: 0;
+                @media (max-width:540px) {
+                    height: 17rem;
+                    width: 1.8rem;
+                    bottom: 0rem;
+                }
             }
         }
     }

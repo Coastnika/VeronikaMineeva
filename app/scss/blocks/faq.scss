@@ -22,6 +22,7 @@
         
     }
     &__title{
+       h2{
         position: relative;
         font-weight: bold;
         font-size: 3rem;
@@ -47,6 +48,7 @@
                 bottom: 0rem;
             }
         }
+       }
     }
     &__card{
         position: relative;
